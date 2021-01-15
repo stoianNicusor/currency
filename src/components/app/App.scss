@@ -1,0 +1,14 @@
+body{
+    background-image: url('./nasa.jpg');
+    background-size: cover;
+  }
+.App{
+    background-color:aqua;
+    height: 35vh;
+    width: 50vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
