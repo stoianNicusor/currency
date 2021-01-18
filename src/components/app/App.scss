@@ -3,7 +3,8 @@ body{
     background-size: cover;
   }
 .App{
-    background-color:aqua;
+    background-color: gray;
+    background: linear-gradient(rgba(26, 26, 255, 1),rgba(0, 102, 255,0.8), rgba(51, 153, 255, 0.7));
     height: 35vh;
     width: 50vw;
     position: fixed;
@@ -11,4 +12,29 @@ body{
     left: 50%;
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
+    .middle{
+
+      .left{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .right{
+        position: fixed; 
+        top: 30%;
+        left: 60%;
+      }
+    }
+
+}
+.load{
+  font-size: 10em ;
+  color: red;
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+
 }
