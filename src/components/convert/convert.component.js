@@ -2,14 +2,28 @@ import React from 'react';
 import './convert.style.scss';
 
 function Convert(props){
+    const {
+        selected,
+        switchC
+    } = props
+
     return(
         <div className='convert'>
-            <input  id='convert' placeholder={props.placeholder} onChange={props.change}/>
+            <div className='line'>
+                <input id='convert' type='number' placeholder={props.placeholder} onChange={props.change} />
+                <select className='select' id='select' onChange={switchC}>
+                 {  selected.map(option => (
+                     <option key={option} value={option}>{option}</option>
+                 ))}       
+                </select>
+            </div>
             <div className='equal'>
                 =
             </div>
             <div className='props'>
-                {props.conv}
+                <span className='prop'>
+                 {props.conv}
+                </span>
             </div>
         </div>
     )

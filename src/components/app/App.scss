@@ -1,40 +1,121 @@
 body{
-    background-image: url('./nasa.jpg');
-    background-size: cover;
+    background-color: #0D46AD;
   }
-.App{
-    background-color: gray;
-    background: linear-gradient(rgba(26, 26, 255, 1),rgba(0, 102, 255,0.8), rgba(51, 153, 255, 0.7));
-    height: 35vh;
-    width: 50vw;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-    .middle{
 
-      .left{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      
-      .right{
-        position: fixed; 
-        top: 30%;
-        left: 60%;
+.App{
+  z-index: 999;
+  
+  #tsparticles{
+    position:fixed !important;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: -1;
+  }
+    .left{
+      display: flex;
+      margin-top: 10vh;
+      font-weight: 900;
+      margin-bottom: 10vh;
+
+      .currency{
+        background-color: #1f58b1; 
+        width: 20%;
+        color: white;
+        margin: 0 1vw;
+        padding-bottom: 5vw;
+        border-radius: 0.5em;
+        height: 13vh;
+        position: relative;
+        text-align: center;
+        
+        .euro{
+          display: flex;
+          justify-content: center;
+          font-size: 1.5em;
+          margin-top: 3.6vh;
+
+          .icon{
+            color:	#f7931a;
+            font-size: 1.3em;
+            margin-right: 0.8vw;
+          }
+        }
+
+        .gbp{
+          display: flex;
+          justify-content: center;
+          font-size: 1.4em;
+          margin-top: 4vh;
+
+          .iconG{
+            color:	#f7931a;
+            font-size: 1.2em;
+            margin-right: 0.4vw;
+          }
+        }
+
+        .dollar{
+          display: flex;
+          justify-content: center;
+          font-size: 1.4em;
+          margin-top: 4vh;
+
+          .iconD{
+            color:#85bb65;
+            font-size: 1.2em;
+            margin-right: 0.6vw;
+          }
+        }
+        
+        .rub{
+          display: flex;
+          justify-content: center;
+          font-size: 1.35em;
+          margin-top: 4.7vh;
+
+          .iconR{
+            color:#f783ac;
+            font-size: 1em;
+            margin-right: 0.2vw;
+          }
+        }
+
+        .chf{
+          display: flex;
+          justify-content: center;
+          font-size: 1.3em;
+          margin-top: 4vh;
+
+          .iconC{
+            color:	#f7931a;
+            font-size: 1.4em;
+            margin-right: 0.8vw;
+          }
+        }
+        
+        ::before{
+          content: "";
+          position: absolute;
+          top: -1.5vh;
+          left: 2vw;
+          width: 80%;
+          height: 10vh;
+          border-radius: 10px;    
+          background: #2dc1c9;
+          z-index: -1;
+        }
       }
     }
-
 }
+
 .load{
   font-size: 10em ;
   color: red;
   position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
-
+  top: 50%;
+  left: 50%;
+   /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
