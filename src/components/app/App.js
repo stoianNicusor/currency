@@ -4,8 +4,10 @@ import Convert from '../convert/convert.component';
 import Display from '../display/display.component';
 import {FaPoundSign,FaDollarSign,FaRubleSign} from 'react-icons/fa';
 import {BiCoin} from 'react-icons/bi';
-import {AiOutlineEuroCircle} from "react-icons/ai";
+import {AiOutlineEuroCircle} from 'react-icons/ai';
 import Particles from 'react-particles-js';
+import {VscLoading} from 'react-icons/vsc'
+
 
 function App() {
 
@@ -14,7 +16,14 @@ function App() {
   const [currency, setCurrency] = useState();
   const [conv, setConv] = useState(0);
   const [newCoin, setNewCoin] = useState('EUR');
-  
+
+   /**
+   * Return the API data in useEffect
+   * 
+   * @function {function} is a function to get API data Json
+   * @dep {array} is state that gets update
+   */
+
   useEffect(() => {
     async function getData(){
       const resp = await fetch('http://data.fixer.io/api/latest?access_key=78fb5f2d728e9371799618245a2b7463&format=1&symbols=EUR,USD,GBP,RUB,CHF,RON');
@@ -26,10 +35,23 @@ function App() {
     getData();
   },[loaded]) ;
 
+  /** 
+   * Function to update the state of newCoin
+   * 
+   * @ take the select from user
+   */
+
   let switchCoin = () => {
     var rsp = document.querySelector('#select').value;
     setNewCoin(rsp);
   } 
+
+  /** 
+   * Function to convert to input
+   * 
+   * @ take the input from user
+   * @ calculate based on currency
+   */
 
   let convert = () => {
     var inp = document.querySelector('#convert').value;
@@ -231,6 +253,9 @@ function App() {
     </div>
     : <div className='load'>
       Loading 
+      <span className='icon'>
+        <VscLoading/>
+      </span>
     </div>
   );
 }
