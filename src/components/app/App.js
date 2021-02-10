@@ -8,7 +8,6 @@ import {AiOutlineEuroCircle} from 'react-icons/ai';
 import Particles from 'react-particles-js';
 import {VscLoading} from 'react-icons/vsc'
 
-
 function App() {
 
   const [loaded, setLoaded] = useState(false);

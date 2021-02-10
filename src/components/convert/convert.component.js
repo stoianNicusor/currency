@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './convert.style.scss';
 
 function Convert(props){
@@ -27,6 +28,14 @@ function Convert(props){
             </div>
         </div>
     )
+}
+
+Convert.propTypes ={
+    selected: PropTypes.func,
+    switchC: PropTypes.func,
+    change: PropTypes.func,
+    conv: PropTypes.func,
+    placeholder: PropTypes.string
 }
 
 export default Convert;

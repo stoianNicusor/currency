@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './display.style.scss';
 
 function Display(props){
@@ -9,4 +10,8 @@ function Display(props){
     )
 }
 
+Display.propTypes = {
+    display: PropTypes.any
+}
 export default Display;
+
